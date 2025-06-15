@@ -18,4 +18,4 @@ try:
         print(f"{temperature}°C is {convert_to_fahrenheit(numeric_value)}°F")
 
 except ValueError:
-    print("Invalid temperature. Please enter a numeric value")
+    print("Invalid temperature. Please enter a numeric value.")
