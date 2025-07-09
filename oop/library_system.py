@@ -2,6 +2,9 @@ class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
+
+    def __str__(self):
+        return f"Title: {self.title}, Author: {self.author}"
         
 class EBook(Book):
     def __init__(self, title, author, file_size: int):
@@ -9,11 +12,17 @@ class EBook(Book):
 
         self.file_size = file_size
 
+    def __str__(self):
+        return f"{super().__str__()}, file size: {self.file_size} "
+
 class PrintBook(Book):
     def __init__(self, title, author, page_count: int):
         super().__init__(title, author)
 
         self.page_count = page_count
+
+    def __str__(self):
+        return f"{super().__str__()}, Page count: {self.page_count}"
 
 class Library:
     def __init__(self):
